@@ -13,6 +13,7 @@ struct Cell_impl
     int candidates[BOARD_SIZE];
     int value; // solved or 0
     bool fixed;
+    bool candidates_removed;
 };
 
 typedef struct Cell_impl Cell;
@@ -46,3 +47,4 @@ int *get_candidates(Cell *cell);
 int check_solved_cells(SudokuBoard *p_board, Cell ***p_solved_cells);
 bool show_possible(SudokuBoard *p_board, Cell **p_solved_cells, int counter);
 void free_sudoku(SudokuBoard *p_board);
+bool is_candidate(Cell *cell, int value);

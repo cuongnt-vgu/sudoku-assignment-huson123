@@ -1,3 +1,5 @@
+// naked_pairs.h
+
 #pragma once
 
 #include "sudoku.h"
